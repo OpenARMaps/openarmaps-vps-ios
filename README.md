@@ -63,7 +63,7 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
             arSession:   arView.session,
             apiKey:      "oam_live_YOUR_KEY",
             locationIds: [],           // empty = auto-search
-            url:         "https://api.openarmaps.org/api/v1",
+            url:         "https://was-vps.web-ar.xyz/vps/api/v3",
             gpsUsage:    false,
             delegate:    self
         ) { self.vps = $0; self.vps?.start() }
@@ -128,7 +128,7 @@ class VPSViewModel: NSObject, ObservableObject, VPSServiceDelegate {
             arSession:   session,
             apiKey:      "oam_live_YOUR_KEY",
             locationIds: [],
-            url:         "https://api.openarmaps.org/api/v1",
+            url:         "https://was-vps.web-ar.xyz/vps/api/v3",
             gpsUsage:    false,
             delegate:    self
         ) { self.vps = $0 }
